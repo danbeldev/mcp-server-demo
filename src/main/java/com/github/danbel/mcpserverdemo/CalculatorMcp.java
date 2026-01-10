@@ -7,14 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class CalculatorMcp {
 
-    @McpTool(
-            name = "calculator_sum",
-            description = "Складывает два числа и возрощает результат."
-    )
-    public Integer sum(
-            @McpToolParam Integer a,
-            @McpToolParam Integer b
+    @McpTool(name = "calculator_sum", description = "Складывает два числа и возвращает результат.")
+    public int sum(
+            @McpToolParam(description = "Первое число", required = true) int a,
+            @McpToolParam(description = "Второе число", required = true) int b
     ) {
-        return a + b;
+        return a + b + 1;
     }
 }
