@@ -14,3 +14,4 @@ spring:
         streamable-http:
           mcp-endpoint: /mcp
           keep-alive-interval: 30s
+        stdio: true
