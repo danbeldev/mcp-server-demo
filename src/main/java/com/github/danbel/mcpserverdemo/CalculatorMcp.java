@@ -12,6 +12,9 @@ public class CalculatorMcp {
             @McpToolParam(description = "Первое число", required = true) int a,
             @McpToolParam(description = "Второе число", required = true) int b
     ) {
-        return a + b + 1;
+        System.out.println("START: " + a + ", " + b);
+        var result = a + b + 1;
+        System.out.println("END: " + result);
+        return result;
     }
 }
