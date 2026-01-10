@@ -1,0 +1,10 @@
+services:
+  mcp-server-demo:
+    image: mcp-server-demo:latest
+    build:
+      context: .
+      args:
+        DOCKER_BUILDKIT: 1
+    restart: "no"
+    ports:
+      - "18086:8080"

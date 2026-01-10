@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mcp-server-demo
+  ai:
+    mcp:
+      server:
+        protocol: STREAMABLE
+        name: mcp-server-demo
+        version: 1.0.0
+        type: SYNC
+        resource-change-notification: true
+        tool-change-notification: true
+        prompt-change-notification: true
+        streamable-http:
+          mcp-endpoint: /mcp
+          keep-alive-interval: 30s
